@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, ArrowRight, Eye, Download } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { usePortfolio } from "@/contexts/PortfolioContext";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import PersonalInfoForm from "@/components/builder/PersonalInfoForm";
 import SkillsForm from "@/components/builder/SkillsForm";
 import ExperienceForm from "@/components/builder/ExperienceForm";
@@ -138,9 +139,9 @@ const Builder = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="h-full overflow-hidden">
-                <div className="h-full border border-border rounded-lg overflow-hidden bg-background">
+                <ScrollArea className="h-full border border-border rounded-lg bg-background">
                   <PortfolioPreview />
-                </div>
+                </ScrollArea>
               </CardContent>
             </Card>
           </div>
